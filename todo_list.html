@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8" />
+    <link rel="stylesheet" media="screen" href="todo_list.css" />
+</head>
+
+<body>
+    <div class="content">
+        <h1>TODO List</h1>
+        <ul id="todolist">
+        </ul>
+        <input id="todotxt" type="text" />
+        <button id="addtodo" type="button" onclick="addElement()">Ajouter</button>
+    </div>
+
+    <script type="text/javascript">
+        function addElement() {
+            var ulElement = document.getElementById("todolist")
+            var txt = document.getElementById("todotxt").value;
+            var newTodo = document.createElement("li");
+            var attonclick = document.createAttribute("onclick");
+            attonclick.value = "deleteElement(this)";
+            var newText = document.createTextNode(txt);
+            newTodo.setAttributeNode(attonclick);
+            newTodo.appendChild(newText);
+            ulElement.appendChild(newTodo);
+        }
+
+        function deleteElement(element) {
+
+            if (confirm("Voulez-vous supprimer cette tâche de la liste")) {
+                document.getElementById("todolist").removeChild(element);
+            }
+        }
+    </script>
+</body>
+
+</html>
