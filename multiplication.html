@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <!-- affiche le double de 4 est 8 la valeur de a est 12-->
+    <script type="text/javascript">
+        var a = 12;
+        var b = 4;
+        function MultipliePar2(b) {
+            var a = b * 2
+            return a;
+        }
+
+        document.write("Le double de ", b, " est ", MultipliePar2(b), "<br/>");
+        document.write("La valeur de a est ", a, "<br/>");
+    </script>
+
+    <!-- affiche le double de 4 est 8 la valeur de a est 8-->
+    <script type="text/javascript">
+        var a;
+        var b = 4;
+        function MultipliePar2(b) {
+            a = b * 2
+            return a;
+        }
+
+        document.write("Le double de ", b, " est ", MultipliePar2(b), "<br/>");
+        document.write("La valeur de a est ", a);
+    </script>
+
+</body>
+
+</html>
