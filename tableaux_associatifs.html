@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+</head>
+
+<body>
+
+    <input id="nom" type="text" value="">
+    <input type="button" onclick="age()" value="Quel age as-tu?">
+
+    <script type="text/javascript">
+        function age() {
+            var tableau = {
+                "anatole": 19,
+                "bernard": 45,
+                "christophe": 34,
+                "dominique": 55,
+                "franck": 78,
+                "lucas": 12,
+                "madeleine": 30,
+                "pierre": 25
+            };
+
+            var nom = document.getElementById("nom").value
+            var capitale = nom.charAt(0).toUpperCase();
+
+            alert(capitale+nom.slice(1)+" a "+tableau[nom]+ " ans");
+        }
+    </script>
+</body>
+
+</html>
